@@ -1,5 +1,6 @@
 import React from "react";
 import "./na.css";
+import { Outlet, Link } from "react-router-dom";
 const navbar = () => {
   return (
     <>
@@ -9,22 +10,13 @@ const navbar = () => {
         </a>
         <i class="fa-solid fa-bars" id="menu-icon"></i>
         <nav class="navbar">
-          <a href="#home" class="active">
+          <Link to="/" class="active">
             Home
-          </a>
-          <a href="#about" class="">
-            About
-          </a>
-          <a href="#services" class="">
-            Services
-          </a>
-          <a href="#portfolio" class="">
-            Portfolio
-          </a>
-          <a href="#contact" class="">
-            Contact
-          </a>
+          </Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
         </nav>
+        <Outlet />
       </header>
     </>
   );

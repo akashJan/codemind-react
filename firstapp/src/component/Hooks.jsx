@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
 const Hooks = () => {
   const [count, setCount] = useState(0);
@@ -26,6 +26,7 @@ const Hooks = () => {
       <div>4.useContext</div>
       <div>5.useMemo</div>
       <div>6.useCallback</div>
+
       <h2>count : {count}</h2>
       <button
         onClick={() => {
@@ -34,6 +35,7 @@ const Hooks = () => {
       >
         add
       </button>
+
       <h2>data:{data}</h2>
       <button
         onClick={() => {
@@ -42,6 +44,7 @@ const Hooks = () => {
       >
         Change data
       </button>
+
       <h2>data:{count2}</h2>
       <button
         onClick={() => {

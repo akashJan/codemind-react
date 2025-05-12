@@ -1,24 +1,31 @@
 import React, { useState } from "react";
 
-const FunctionCom = () => {
+const FunctionalComponent = ({ abc }) => {
   const [count, setCount] = useState(10);
-  const [user, setUser] = useState("akash");
-
-  const handleCount = () => {
+  const [user, setUser] = useState("codemind");
+  const handleClick = () => {
     setCount(count + 1);
+    setUser(user + " developer");
   };
-  const addName = () => {
-    let name = "Akash Jan";
-    setUser(name);
+  const handleDecrement = (val) => {
+    setCount(count - val);
   };
+  // let count = 10;
   return (
     <>
-      <h1>Increment</h1>
-      <p>Count:{count}</p>
-      <button onClick={handleCount}>Increment</button>
-      <p onClick={addName}>Add Name: {user}</p>
+      <div>I am from functional component. : {abc}</div>
+      <div>count: {count}</div>
+      <button onClick={handleClick}>Increment</button>
+      <button
+        onClick={() => {
+          handleDecrement(3);
+        }}
+      >
+        Decrement
+      </button>
+      <div>user: {user}</div>
     </>
   );
 };
 
-export default FunctionCom;
+export default FunctionalComponent;
