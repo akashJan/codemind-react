@@ -1,51 +1,51 @@
 import "./App.css";
-import react, { useState } from "react";
-// import FunctionCom from "./component/functionCom";
-// import ClassCom from "./component/classCom";
+import React, { useState } from "react";
 // import SimpleCalculator from "./component/simpleCalculator/SimpleCalculator.jsx";
-// import MathOperations from "./component/MathOperations.jsx";
-import Navbar from "./component/webPageComp/navbar";
-import Home from "./component/webPageComp/Home";
-import About from "./component/webPageComp/About";
-import Contact from "./component/webPageComp/Contact";
-import Footer from "./component/webPageComp/Footer";
+// import FunctionCom from "./component/FunctionCom";
+import ClassCom from "./component/classCom/ClassCom";
+import ComRender from "./component/condtnRendering/ComRender";
+// import UserClass from "./component/classCom/UserClass";
+// import ChildClass from "./component/classCom/ChildClass";
+
 // import Hooks from "./component/Hooks";
 // import RefHook from "./component/RefHooks";
-// import ParentComponent from "./component/ParentCom";
+// import Parent from "./component/hooks/Parent";
 // import MyContext from "./component/utils/MyContext";
-// import Greet from "./component/Greet";
-
-import { BrowserRouter as Routers, Routes, Route } from "react-router-dom";
 
 function App() {
-  const [isAuth, setIsAuth] = useState(10);
-  const [showMessage, setShowMessage] = useState("");
-  const [user, setUser] = useState("abc");
-  const data = ["akash", "aditi", "anshu", "ajay"];
-  const [count, setCount] = useState(0);
-  //conditional rendering
-  //1.if else 2.switch case 3.logical && 4.ternary operation
+  // const [isAuth, setIsAuth] = useState(true);
+
+  // useContext
+  // const data = ["akash", "aditi", "anshu", "ajay"];
+  // const [user, setUser] = useState("abc");
+  // const [count, setCount] = useState(0);
+
   return (
-    <Routers>
-      <Navbar />
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
-      </Routes>
-      <Footer />
-      {/* <FunctionCom />
-      <ClassCom /> */}
-      {/* <SimpleCalculator />
-      <MathOperations /> */}
+    <>
+      {/* <SimpleCalculator /> */}
+      <ComRender />
+      {/* <FunctionCom /> */}
+      {/* <ClassCom isAuth={isAuth} abc="test" /> */}
+      {/* <UserClass />
+      <ChildClass /> */}
+
       {/* <Hooks /> */}
       {/* <RefHook /> */}
-
-      {/* <button onClick={() => {setUser(data[count] ? data[count].toUpperCase() : data[0].toUpperCase()); setCount(count+1);}}>Change user</button>
-    <MyContext.Provider value={{user, setUser, count, setCount}}>
-    <ParentComponent/>
-    </MyContext.Provider> */}
-    </Routers>
+      {/* useContext */}
+      {/* <button
+        onClick={() => {
+          setUser(
+            data[count] ? data[count].toUpperCase() : data[0].toUpperCase()
+          );
+          setCount(count + 1);
+        }}
+      >
+        Change user
+      </button>
+      <MyContext.Provider value={{ user, setUser, count, setCount }}>
+        <Parent />
+      </MyContext.Provider> */}
+    </>
   );
 }
 

@@ -11,7 +11,7 @@ class UserClass extends Component {
   }
 
   async componentDidMount() {
-    console.log("componentdid mount");
+    console.log("componentDid mount");
     //api call
     const data = await fetch("https://api.github.com/users/suchita96");
     const json = await data.json();

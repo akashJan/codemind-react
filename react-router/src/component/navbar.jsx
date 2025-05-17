@@ -5,7 +5,7 @@ const navbar = () => {
   return (
     <>
       <header class="header">
-        <a href="#" class="logo">
+        <a href="/" class="logo">
           Portfolio
         </a>
         <i class="fa-solid fa-bars" id="menu-icon"></i>
