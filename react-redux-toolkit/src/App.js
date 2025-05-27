@@ -1,14 +1,30 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import { decrement, increment } from "./components/CounterReducer";
+// import Navbar from "./components/Navbar";
 
 const App = () => {
-  const cart = useSelector((state) => state.counter);
+  const dispatch = useDispatch();
+  const value = useSelector((state) => state.counter);
   return (
-    <div>
-      <ul>
-        <li>cart : {cart}</li>
-      </ul>
-    </div>
+    <>
+      {/* <Navbar /> */}
+
+      <h2 style={{ margin: "10px" }}>Value : {value}</h2>
+      <button
+        style={{ padding: "10px", margin: "10px" }}
+        onClick={() => dispatch(increment())}
+      >
+        Increment
+      </button>
+      <button
+        style={{ padding: "10px", margin: "10px" }}
+        onClick={() => dispatch(decrement())}
+      >
+        Decrement
+      </button>
+    </>
   );
 };
 
