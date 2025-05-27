@@ -22,11 +22,11 @@ const ReactNavbar = () => {
 
       <div className="col-md-2 customDiv">
         <ul className="list">
-          {/* <li>
+          <li>
             <Nav.Link className="n-l" href="/reactJs/reactHome  ">
               React Home
             </Nav.Link>
-          </li> */}
+          </li>
           <li>
             <Nav.Link className="n-l" href="/reactJs/intro">
               React Introduction

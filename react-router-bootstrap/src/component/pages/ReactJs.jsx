@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-// import ReactHome from "../pages-reactJs/ReactHome";
+import ReactHome from "../pages-reactJs/ReactHome";
 import ReactNavbar from "../pages-reactJs/ReactNavbar";
 import Intro from "../pages-reactJs/Intro";
 import Jsx from "../pages-reactJs/Jsx";
@@ -17,8 +17,9 @@ const ReactJs = () => {
         <ReactNavbar />
         <div className="col-md-8">
           <Routes>
-            {/* <Route path="/reactHome " element={<ReactHome />} /> */}
-            <Route index path="/intro" element={<Intro />} />
+            <Route path="/" element={<ReactHome />} />
+            <Route path="/reacthome" element={<ReactHome />} />
+            <Route path="/intro" element={<Intro />} />
             <Route path="/jsx" element={<Jsx />} />
             <Route path="/props" element={<Props />} />
             <Route path="/routing" element={<Routing />} />
