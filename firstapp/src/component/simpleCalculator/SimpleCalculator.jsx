@@ -1,6 +1,6 @@
 import React from "react";
 import "../simpleCalculator/sC.css";
-
+// Assignment
 const calculation = () => {
   const a = 25;
   const b = 13;

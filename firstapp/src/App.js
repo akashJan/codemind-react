@@ -1,9 +1,9 @@
 import "./App.css";
-import React, { useState } from "react";
+// import React, { useState } from "react";
 // import SimpleCalculator from "./component/simpleCalculator/SimpleCalculator.jsx";
 // import FunctionCom from "./component/FunctionCom";
-import ClassCom from "./component/classCom/ClassCom";
-import ComRender from "./component/condtnRendering/ComRender";
+// import ClassCom from "./component/classCom/ClassCom";
+// import ConRender from "./component/condtnRendering/ComRender";
 // import UserClass from "./component/classCom/UserClass";
 // import ChildClass from "./component/classCom/ChildClass";
 
@@ -12,7 +12,13 @@ import ComRender from "./component/condtnRendering/ComRender";
 // import Parent from "./component/hooks/Parent";
 // import MyContext from "./component/utils/MyContext";
 
+// import LazyLoading from "./component/lazyLoading/LazyLoading";
+// import ControlledCom from "./component/controlledCom/ControlledCom";
+import HigherOrderCom from "./component/higherOrderCom/HigherOrderCom";
+// import WithAuth from "./component/higherOrderCom/WithAuth";
+// import Dashboard from "./component/higherOrderCom/Dashboard";
 function App() {
+  // const AuthDash = WithAuth(Dashboard);
   // const [isAuth, setIsAuth] = useState(true);
 
   // useContext
@@ -23,7 +29,7 @@ function App() {
   return (
     <>
       {/* <SimpleCalculator /> */}
-      <ComRender />
+      {/* <ConRender /> */}
       {/* <FunctionCom /> */}
       {/* <ClassCom isAuth={isAuth} abc="test" /> */}
       {/* <UserClass />
@@ -45,6 +51,11 @@ function App() {
       <MyContext.Provider value={{ user, setUser, count, setCount }}>
         <Parent />
       </MyContext.Provider> */}
+
+      {/* <LazyLoading /> */}
+      {/* <ControlledCom /> */}
+      <HigherOrderCom />
+      {/* <AuthDash /> */}
     </>
   );
 }
